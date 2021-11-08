@@ -2,3 +2,4 @@
 172.19.0.1 - - [08/Nov/2021:08:36:06 +0000] "GET /favicon.ico HTTP/1.1" 404 489 "http://localhost:8080/infos.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36"
 172.19.0.1 - - [08/Nov/2021:08:37:27 +0000] "GET /infos.php HTTP/1.1" 200 25651 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36"
 172.19.0.1 - - [08/Nov/2021:08:37:59 +0000] "GET /infos.php HTTP/1.1" 200 25673 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36"
+172.19.0.1 - - [08/Nov/2021:08:42:47 +0000] "GET /test-pdo/test-PDO.php HTTP/1.1" 200 561 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36"
