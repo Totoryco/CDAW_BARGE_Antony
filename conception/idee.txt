@@ -1,0 +1,6 @@
+font noir, écriture blanche
+bonus: motifs type flammes, rouges
+TOUT qui tient sur une page (sans scroll) pour l'accueil
+zoom quand tu passes la souris dessus + boutons like, favoris, ajouter a ma playlist
+stat dans profil
+100% anglais
