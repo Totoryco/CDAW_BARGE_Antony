@@ -29,3 +29,19 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 [Tue Nov 09 13:15:04.413283 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.51 (Debian) PHP/8.0.12 configured -- resuming normal operations
 [Tue Nov 09 13:15:04.413623 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
 [Tue Nov 09 13:16:00.044585 2021] [php:notice] [pid 18] [client 172.19.0.1:51446] Xdebug: [Step Debug] Could not connect to debugging client. Tried: 172.19.0.1:9003 (from REMOTE_ADDR HTTP header), localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.4. Set the 'ServerName' directive globally to suppress this message
+[Wed Nov 10 10:17:33.443888 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.51 (Debian) PHP/8.0.12 configured -- resuming normal operations
+[Wed Nov 10 10:17:33.444337 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Nov 10 10:21:48.793421 2021] [php:notice] [pid 35] [client 172.19.0.1:47258] Xdebug: [Step Debug] Could not connect to debugging client. Tried: 172.19.0.1:9003 (from REMOTE_ADDR HTTP header), localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[Wed Nov 10 10:41:54.902384 2021] [php:error] [pid 36] [client 172.19.0.1:47274] script '/var/www/html/test-pdo/testPDOBruce.php' not found or unable to stat
+[Wed Nov 10 10:42:02.105583 2021] [php:error] [pid 37] [client 172.19.0.1:47276] script '/var/www/html/test-pdo/testPDOBruce.php' not found or unable to stat
+[Wed Nov 10 10:42:06.423570 2021] [php:notice] [pid 38] [client 172.19.0.1:47278] Xdebug: [Step Debug] Could not connect to debugging client. Tried: 172.19.0.1:9003 (from REMOTE_ADDR HTTP header), localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[Wed Nov 10 10:42:55.449922 2021] [php:error] [pid 39] [client 172.19.0.1:47286] script '/var/www/html/test-pdo/testPDOBruce.php' not found or unable to stat
+[Wed Nov 10 10:46:37.527958 2021] [php:notice] [pid 1089] [client 172.19.0.1:47290] Xdebug: [Step Debug] Could not connect to debugging client. Tried: 172.19.0.1:9003 (from REMOTE_ADDR HTTP header), localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[Wed Nov 10 10:46:53.481023 2021] [php:error] [pid 35] [client 172.19.0.1:47298] script '/var/www/html/test-pdo/testPDOBruce.php' not found or unable to stat
+[Wed Nov 10 10:57:37.818000 2021] [php:error] [pid 36] [client 172.19.0.1:47310] script '/var/www/html/test-pdo/testPDOBruce.php' not found or unable to stat
+[Wed Nov 10 11:34:35.621869 2021] [php:error] [pid 37] [client 172.19.0.1:47336] script '/var/www/html/test-pdo/testPDOBruce.php' not found or unable to stat
+[Wed Nov 10 11:34:40.777081 2021] [php:error] [pid 38] [client 172.19.0.1:47338] script '/var/www/html/test-pdo/test-PDO-Bruce.php' not found or unable to stat
+[Wed Nov 10 11:34:45.326038 2021] [php:error] [pid 38] [client 172.19.0.1:47338] script '/var/www/html/test-pdo/test-PDO-Bruce.php' not found or unable to stat
+[Wed Nov 10 11:34:46.427620 2021] [php:error] [pid 38] [client 172.19.0.1:47338] script '/var/www/html/test-pdo/test-PDO-Bruce.php' not found or unable to stat
+[Wed Nov 10 11:34:48.849782 2021] [php:notice] [pid 38] [client 172.19.0.1:47338] Xdebug: [Step Debug] Could not connect to debugging client. Tried: 172.19.0.1:9003 (from REMOTE_ADDR HTTP header), localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
