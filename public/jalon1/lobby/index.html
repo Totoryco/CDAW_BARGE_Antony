@@ -495,7 +495,7 @@
         <header class="bg-white py-1">
             <div class="container px-4 px-lg-5">
                 <div class="text-center">
-                    <h1 class="display-5 fw-bolder">---</h1>
+                    <h1 class="display-5 fw-bolder">-</h1> <!--Possibilité d'ajouter un texte de transition ou une image ?-->
                 </div>
             </div>
         </header>
@@ -511,47 +511,60 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet"/>
-                        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-                        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
-                        <div class="dropdown">
-                            <button class="btn btn-default dropdown-toggle" type="button" 
-                                    id="dropdownMenu1" data-toggle="dropdown" 
-                                    aria-haspopup="true" aria-expanded="true">
-                              <i class="glyphicon glyphicon-cog"></i>
-                              <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu checkbox-menu allow-focus" aria-labelledby="dropdownMenu1">
-                            
-                              <li >
-                                <label>
-                                  <input type="checkbox"> Cheese
-                                </label>
-                              </li>
-                              
-                              <li >
-                                <label>
-                                  <input type="checkbox"> Pepperoni
-                                </label>
-                              </li>
-                              
-                              <li >
-                                <label>
-                                  <input type="checkbox"> Peppers
-                                </label>
-                              </li>
-                              
+                        <li class="nav-item dropdown mr-auto">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Type</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                                    <div id="list1" class="dropdown-check-list" tabindex="100">
+                                        <span class="anchor">Select type</span>
+                                        <ul class="items">
+                                          <li><input type="checkbox" />Movies </li>
+                                          <li><input type="checkbox" />Series</li>
+                                        </ul>
+                                    </div>
+                                </ul>
                             </ul>
-                          </div>
+                        </li>
+
+                        <li class="nav-item dropdown mr-auto">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Year</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                                    <div id="list1" class="dropdown-check-list" tabindex="100">
+                                        <span class="anchor">Select years</span>
+                                        <ul class="items">
+                                          <li><input type="checkbox" />2021 </li>
+                                          <li><input type="checkbox" />2020</li>
+                                          <li><input type="checkbox" />2019 </li>
+                                          <li><input type="checkbox" />2018 </li>
+                                          <li><input type="checkbox" />2017 </li>
+                                          <li><input type="checkbox" />2016 </li>
+                                          <li><input type="checkbox" />2015</li>
+                                        </ul>
+                                    </div>
+                                </ul>
+                            </ul>
+                        </li>
                     </ul>
+
                     <ul class="navbar-nav mr-auto mb-2 mb-lg-0 ms-lg-4">
                         <li class="nav-item dropdown mr-auto">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Profile</a>
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Genre</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#!">tata</a></li>
-                                <li><hr class="dropdown-divider" /></li>
-                                <li><a class="dropdown-item" href="#!">Disconnect</a></li>
-                                <li><a class="dropdown-item" href="#!">Change user</a></li>
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                                    <div id="list1" class="dropdown-check-list" tabindex="100">
+                                        <span class="anchor">Select genre</span>
+                                        <ul class="items">
+                                          <li><input type="checkbox" />Action </li>
+                                          <li><input type="checkbox" />Isekai</li>
+                                          <li><input type="checkbox" />Shojo </li>
+                                          <li><input type="checkbox" />Seinen </li>
+                                          <li><input type="checkbox" />Banana </li>
+                                          <li><input type="checkbox" />Shonen </li>
+                                          <li><input type="checkbox" />Sasagayo</li>
+                                        </ul>
+                                    </div>
+                                </ul>
                             </ul>
                         </li>
                     </ul>
