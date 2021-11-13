@@ -1,5 +1,4 @@
 # Auteurs
-- <NOM Prénom>
 - BARGE Antony
 - HERMESEULE Bruce
 
