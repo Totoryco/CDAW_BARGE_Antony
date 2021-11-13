@@ -1,5 +1,8 @@
 # Auteurs
+<<<<<<< HEAD
 - <NOM Prénom>
+=======
+>>>>>>> 7623bd886e87e99b0368571f77ec5afd22697887
 - BARGE Antony
 - HERMESEULE Bruce
 
