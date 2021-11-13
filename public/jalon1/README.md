@@ -1,5 +1,5 @@
 # Auteur(s)
-- <NOM prenom>
+- <BARGE Antony>
 - <NOM prenom>
 
 # Jalon X
