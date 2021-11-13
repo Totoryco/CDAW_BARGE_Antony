@@ -1,8 +1,9 @@
-# Auteur(s)
-- <BARGE Antony>
-- <NOM prenom>
+# Auteurs
+- <NOM Prénom>
+- BARGE Antony
+- HERMESEULE Bruce
 
-# Jalon X
+# Jalon 1
 
 <description>
 
