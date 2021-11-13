@@ -5,7 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Project Anime - Lobby</title>
+        <title>Project Anime - Search</title>
+        <!-- FontAwesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Bootstrap icons-->
@@ -15,18 +17,26 @@
     </head>
     <body>
         <!-- Navigation bar-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#!">Project Anime Lobby</a>
+                <a class="navbar-brand" href="#!">Project Anime Search</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li> <!-- Icon home ici, clickable vers home-->
+                        <li class="nav-item"><a class="nav-link active" style="font-size: 24px;" aria-current="page" href="#!"><i class="fa fa-home" style="color:#fd7e14;"></i></a></li> <!-- Icon home ici, clickable vers home-->
                     </ul>
                     <ul class="navbar-nav mr-auto mb-2 mb-lg-0 ms-lg-4">
-                        <li class="nav-item"><a class="nav-link" href="#!">My collection</a></li>
+                            <div class="search">
+                                <form action="#">
+                                    <div class="input-group">
+                                        <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                                        <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fa fa-search"></i></button>
+                                    </div>
+                                </form>
+                            </div>
+                        <li class="nav-item"><a class="nav-link" style="font-size: 18px;" href="#!">My collection</a></li>
                         <li class="nav-item dropdown mr-auto">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Profile</a>
+                            <a class="nav-link dropdown-toggle" style="font-size: 18px;" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-user" style="color:#fd7e14;"></i> Profile</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="#!">See my profile</a></li>
                                 <li><hr class="dropdown-divider" /></li>
