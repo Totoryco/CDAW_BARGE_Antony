@@ -1,6 +1,6 @@
 ## Auteurs
 - BARGE Antony
-- HERMESEULE Bruce
+- HERSEMEULE Bruce
 
 ## Jalon 1
 
@@ -27,15 +27,17 @@ Le complément de ces informations dépendra de ce qui nous sera accessible par 
 # Pour tester et valider notre travail :
    - consulter la maquette papier des fenêtres dans public/jalon1/analyse/ 
       (avec la page profile et otherprofile en haut à gauche,
-      la page lobby en haut à droite,
+      la page lobby et mycollection en haut à droite,
       la page display en bas à droite,
-      et la page My collection en bas à gauche)
+      et la page search en bas à gauche)
    - ouvrir un container Docker pour le workspace
    - se rendre sur le lien : http://localhost:8080/jalon1/login/index.html pour atteindre la page d'accueil qui ouvrira une page de connection
 
 La suite constitue un parcours type permettant de faire le tour des fonctionnalités implémentées, en observant les pages avant/après chaque instruction :
    - clicker sur "Sign up here" en bas afin de simuler une inscription
    - rentrer n'importe quels caractères dans les champs "Username" "Email Address" (@ exigé), "Password" et "Confirm Password" puis clicker sur le bouton "Sign Up" afin de valider son inscription
+   - clicker sur "Reset my password" en bas afin de simuler un oubli de son mot de passe
+   - rentrer n'importe quels caractères dans le cham "Email Address" (@ exigé) puis clicker sur le bouton "reset", qui simulera un envoi de nouveau mot de passe
    - rentrer n'importe quels caractères dans les champs "Username" et "Password", puis clicker sur le bouton "Login in" afin de se connecter fictivement
    - écrire un message dans une barre de recherche afin d'atteindre la page de recherche
    - aller dans "My collection" avec le bouton en haut à droite de la barre de navigation
