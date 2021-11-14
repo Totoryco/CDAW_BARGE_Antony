@@ -49,5 +49,3 @@ La suite constitue un parcours type permettant de faire le tour des fonctionnali
 Il est à noter que la gestion des commentaires se fera à l'aide d'un bouton edit à côté de chaque commentaire (dans la page de display des épisodes ou dans la page de profil d'un autre utilisateur) lorsque l'on est connecté en tant que modérateur.
 De même, un bouton supplémentaire pour les administrateurs sera situé dans la barre de gauche de la page profil d'un autre utilisateur et premettra à l'admin d'attribuer le rôle de modérateur, d'utilisateur normal, d'utilisateur banni (avec temporalité) ou alors d'admin.
 Pour ce qui est du signalement de commentaires, on pense qu'il vaut mieux que tous les utilisateurs y aient accés et le commentaire serait alors surligné ou d'une autre couleur aux yeux des modérateurs et administrateurs.
-
-Vidéo de démonstration : https://youtubexxxx
