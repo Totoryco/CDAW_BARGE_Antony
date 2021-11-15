@@ -17,6 +17,10 @@ Route::get('/{prenom}/{nom}', function($prenom, $nom){
     echo $nom;
 });
 
+Route::get('/template', function() {
+    return view('template');
+});
+
 Route::get('/{title}', function($title, $id) {
     return $title;
 })->where(['title' => '[a-z]+']);
@@ -30,4 +34,5 @@ Route::get('/', function() {
     // return view('welcome');
     return view('helloworld');
 });
+
 ?>
