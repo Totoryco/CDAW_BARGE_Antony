@@ -13,13 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/{prenom}/{nom}', function($prenom, $nom){
-    echo $prenom;
+    echo $prenom;echo '3';
     echo $nom;
 });
 
-Route::get('/test', function() {
-    echo( "toto");
-});
+Route::get('/{title}', function($title, $id) {
+    return $title;
+})->where(['title' => '[a-z]+']);
+
+Route::get('/', function() {
+    echo "Liste des films";
+})->name('listeFilms');
 
 Route::get('/', function() {
     // echo "Hello world!";
