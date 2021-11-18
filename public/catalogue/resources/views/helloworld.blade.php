@@ -21,8 +21,7 @@
         </style>
     </head>
     <body>
-        @extends('template.blade.php')
-
+        @extends('layout.app')
         @section('content')
             @parent
 
