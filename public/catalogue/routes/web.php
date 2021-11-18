@@ -14,6 +14,7 @@ use App\Http\Controllers\listeMediasController;
 |
 */
 Route::get('/films', 'App\Http\Controllers\listeMediasController@helloWorld')->name('films');
+Route::get('/films/{idFilm}', 'App\Http\Controllers\listeMediasController@helloBanane')->name('filmsid');
 
 Route::get('/{prenom}/{nom}', function($prenom, $nom){
     echo $prenom;echo '3';
