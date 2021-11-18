@@ -21,6 +21,12 @@
         </style>
     </head>
     <body>
-        <p>Hello world!</p>
+        @extends('template.blade.php')
+
+        @section('content')
+            @parent
+
+            <p>Hello world!</p>
+        @endsection
     </body>
 </html>

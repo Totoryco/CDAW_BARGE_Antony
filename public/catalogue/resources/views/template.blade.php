@@ -62,6 +62,7 @@
 
         <!-- Content-->
             @section('content')
+                <p>Hello banane!</p>
             @endsection
 
         <!-- Footer-->

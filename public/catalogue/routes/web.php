@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\listeMediasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/films', 'App\Http\Controllers\listeMediasController@helloWorld')->name('films');
+
 Route::get('/{prenom}/{nom}', function($prenom, $nom){
     echo $prenom;echo '3';
     echo $nom;
