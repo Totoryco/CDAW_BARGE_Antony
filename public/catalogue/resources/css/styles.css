@@ -3046,8 +3046,8 @@ textarea.form-control-lg {
 
 .btn-primary {
   color: #fff;
-  background-color: #fd7e14;
-  border-color: #fd7e14;
+  background-color: var(--bs-orange);
+  border-color: var(--bs-orange);
 }
 .btn-primary:hover {
   color: #fff;
@@ -11745,4 +11745,11 @@ body {
 @keyframes fadeEffect {
   from {opacity: 0;}
   to {opacity: 1;}
+}
+
+/* Style the navbar icon */
+.nav-icons {
+  color: var(--bs-orange);
+  margin-left: 10px;
+  margin-right: 5px;
 }
