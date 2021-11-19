@@ -21,7 +21,7 @@
         </style>
     </head>
     <body>
-        @extends('layout.app')
+        @extends('template')
         @section('content')
             @parent
 
