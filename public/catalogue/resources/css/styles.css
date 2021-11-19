@@ -4533,6 +4533,7 @@ textarea.form-control-lg {
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
+  margin-top: 10px;
 }
 .card > hr {
   margin-right: 0;
@@ -4560,6 +4561,7 @@ textarea.form-control-lg {
 .card-body {
   flex: 1 1 auto;
   padding: 1rem 1rem;
+  padding-top: 1.5rem;
 }
 
 .card-title {
@@ -4591,8 +4593,10 @@ textarea.form-control-lg {
 
 .card-footer {
   padding: 0.5rem 1rem;
-  background-color: rgba(0, 0, 0, 0.03);
+  display: flex;
+  background-color: var(--bs-dark);
   border-top: 1px solid rgba(0, 0, 0, 0.125);
+  justify-content: space-around;
 }
 .card-footer:last-child {
   border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px);
@@ -6975,6 +6979,10 @@ textarea.form-control-lg {
 
 .w-auto {
   width: auto !important;
+}
+
+.mw-33 {
+  max-width: 33% !important;
 }
 
 .mw-100 {
@@ -11752,4 +11760,55 @@ body {
   color: var(--bs-orange);
   margin-left: 10px;
   margin-right: 5px;
+}
+
+.card-format{
+  width: 15rem;
+  overflow: hidden;
+}
+
+.icon-card-format{
+    color: var(--bs-white);
+    font-size: 24px;
+}
+
+.card .slide{
+    transition: 0.5s;
+}
+
+.card .slide.slide1 {
+    align-content: center;
+    z-index: 1;
+    transition: .7s;
+    transform: translateY(50px);
+    background: #fff;
+}
+
+.card:hover .slide.slide1{
+    transform: translateY(0px);
+}
+
+.card .slide.slide2 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    transition: .8s;
+    transform: translateY(-100px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.container .card:hover .slide.slide2{
+    transform: translateY(0);
+}
+
+.card .slide.slide2::after{
+    content: "";
+    position: absolute;
+    height: 4px;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #2c73df;
 }

@@ -56,13 +56,15 @@
 
         <!-- Content-->
         @section('content')
-        
-        <div class="container">
-            @yield('ditBonjour')
+
+        <div class="container" style="display: flex;">
+            @yield('cards')
+            @yield('cards')
         </div>
 
         <!-- Footer-->
-        <footer class="py-5 bg-dark">
+        <footer class="py-5 bg-dark" style="justify-content: flex-end;">
+        
             <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Groupe 2 - Jalon 2 2021</p></div>
         </footer>
         
