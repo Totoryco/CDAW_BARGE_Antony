@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\listeMediasController;
 use App\Http\Controllers\ShowsFilmsController;
+use App\Models\Film;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,25 +15,21 @@ use App\Http\Controllers\ShowsFilmsController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/films', 'App\Http\Controllers\ShowsFilmsController@showAllFilms')->name('films');
 
+//Create
 Route::get('/addFilm', 'App\Http\Controllers\ShowsFilmsController@addFilmForm')->name('addFilmForm');
 Route::post('/addFilm', 'App\Http\Controllers\ShowsFilmsController@addFilm')->name('addFilm');
-
-Route::get('/addFilm/{film}', 'App\Http\Controllers\ShowsFilmsController@updateFilmForm')->name('updateFilmForm');
+//Read
+Route::get('/films', 'App\Http\Controllers\ShowsFilmsController@showAllFilms')->name('films');
+//Update
+Route::get('/addFilm/{film}', 'App\Http\Controllers\ShowsFilmsController@updateFilmForm')->where('film', '[A-Za-z]+')->name('updateFilmForm');
 Route::put('/addFilm/{film}', 'App\Http\Controllers\ShowsFilmsController@updateFilm')->name('updateFilm');
-
-/*
-Route::get('/films', 'App\Http\Controllers\listeMediasController@helloWorld')->name('films');
-Route::get('/films/{idFilm}', 'App\Http\Controllers\listeMediasController@helloBanane')->name('filmsid');
+//Delete
+Route::delete('/deleteFilm/{film}', 'App\Http\Controllers\ShowsFilmsController@deleteFilm')->where('film', '[A-Za-z]+')->name('deleteFilm');
 
 Route::get('/{prenom}/{nom}', function($prenom, $nom){
     echo $prenom;echo '3';
     echo $nom;
-});
-
-Route::get('/template', function() {
-    return view('template');
 });
 
 Route::get('/{title}', function($title, $id) {
@@ -48,5 +45,5 @@ Route::get('/', function() {
     // return view('welcome');
     return view('cardTemplate');
 });
-*/
+
 ?>

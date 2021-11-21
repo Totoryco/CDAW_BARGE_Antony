@@ -11,24 +11,12 @@ use Illuminate\Support\Facades\DB;
 class ShowsFilmsController extends Controller
 {
     public function showAllFilms(){
-        //$films = Film::with('category')->get();
         $films = DB::table('films')->get();
-        /*
-        $authUser = Auth::user();
-        $favs =$authUser->load("favs")["favs"];
-        $favIds = array();
-        foreach($favs as $fav){
-            array_push($favIds,$fav->id);
-        }
-        */
         $data = [
             "films" => $films,
-            /*"favs" = $favs,
-            "favIds" = $favIds,
-            "idUser" = Auth::id(),*/
         ];
 
-        return view('film', $data); //,$data);
+        return view('film', $data);
     }
 
     public function addFilmForm(){
@@ -38,7 +26,7 @@ class ShowsFilmsController extends Controller
             "categories" => $films,
         ];
 
-        return view('addFilmForm',$data);//,$categories);
+        return view('addFilmForm',$data);
     }
 
     public function addFilm(Request $request){
@@ -53,22 +41,27 @@ class ShowsFilmsController extends Controller
         return redirect ('/films');
     }
 
-    public function updateFilmForm(Film $film){
-        $film_name = $film['name'];
+    public function updateFilmForm($film_name){
+        $film_name = $film_name;
+        $films = DB::table('categories')->get();
         $data=[
             'film_name' => $film_name,
+            "categories" => $films,
         ];
-        return view('addFilmForm',$data);
-
+        return view('updateFilmForm',$data);
     }
 
-    public function updateFilm(Request $request, Film $film){
-        //Récupérer les inputs comme create
-        /*$data = [
-            'name' => $name,
-            'id_genre' => $id_genre,
-        ];
-        $film::update ($data);
-        */
+    public function updateFilm($film_name, Request $request){
+        $query = DB::table('films')->select('id')->where('name', $film_name)->pluck('id')->toArray();
+        $id_films = $query[0];
+        $new_name = $request->input('name');
+        $id_genre = $request->input('category');
+        DB::table('films')->where('id', $id_films)->update(['name' => $new_name],['id_genre' =>$id_genre]);
+        return redirect ('/films');
+    }
+
+    public function deleteFilm($film_name){
+        DB::table('films')->where('name', $film_name)->delete();
+        return redirect ('/films');
     }
 }

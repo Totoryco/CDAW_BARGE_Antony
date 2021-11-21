@@ -82,26 +82,45 @@
 </style>
 </head>
 <body>
-<div class="signup-form">
-    <form action="{{url('#')}}" method="PUT"> <!--Pour atttaquer la bonne route ??? -->
-        @csrf <!--Sécurité -->
-		<h2>Update Film</h2>
-		<p>Please, respect the rules</p>
-		<hr>
-        <div class="form-group">
-        	<input type="text" class="form-control" name="name" placeholder="name" required="required">
-        </div>
-		<div class="form-group">
-            <input type="number" class="form-control" name="id" placeholder="id" required="required">
-        </div>
-		<div class="form-group">
-            <button type="submit" class="btn btn-primary btn-block btn-lg">Add film</button>
-        </div>
-		<div class="text-right">Click here to go <a href="lobby.html">home</a></div>
-    </form>
-	<div class="text-center">Doesn't have an account yet ? <a href="signup.html">Sign up here</a></div>
-	<div class="text-center">Forgot your password ? <a href="forgotpassword.html">Reset my password</a></div>
+    <div class="signup-form">
+        <form action="{{ route('updateFilm', ['film' => $film_name]) }}" method="POST">
+            @csrf
+            @method("PUT")
+            <h2>Update Film</h2>
+            <p>Please, respect the rules</p>
+            <hr>
+            <div class="form-group">
+                <input type="text" class="form-control" id = 'name' name="name" placeholder="name" required="required" value = {{$film_name}} >
+            </div>
+            <div  class="form-group">
+                <select ntype="number" class="form-control" id = 'category' name="category" placeholder="category" required="required">
+                    <option value="" selected disabled hidden>Choose anime category</option>
+                    @foreach ($categories as $category)
+                        <option value={{ $category->id }}>{{ $category->name }}</option>
+                    @endforeach
+                </select>
+            </div>
 
-</div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block btn-lg">Update !</button>
+            </div>
+            <div class="text-right">Click here to go <a href="lobby.html">home</a></div>
+        </form>
+        <div class="text-center">Doesn't have an account yet ? <a href="signup.html">Sign up here</a></div>
+        <div class="text-center">Forgot your password ? <a href="forgotpassword.html">Reset my password</a></div>
+
+    </div>
+    <div class="signup-form">
+        <form action="{{ route('deleteFilm', ['film' => $film_name]) }}" method="POST">
+            @csrf
+            @method("DELETE")
+            <p>/!\ This will permanently delete the film /!\</p>
+            <input type="hidden" name="_method" value="DELETE">
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block btn-lg">Delete !</button>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
