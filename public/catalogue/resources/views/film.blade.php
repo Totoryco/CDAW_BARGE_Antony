@@ -28,22 +28,22 @@
                     <div class="row">
                         <div class="col-xl-3 col-md-6">
                             <div class="card bg-primary text-white mb-4">
-                                <a href="{{ url('addFilm') }}"><div class="card-body">CREATE</div></a>
+                                <a href="{{ route('addFilmForm') }}"><div class="card-body">CREATE</div></a>
                             </div>
                         </div>
                         <div class="col-xl-3 col-md-6">
                             <div class="card bg-warning text-white mb-4">
-                                <a href="{{ url('films') }}"><div class="card-body">READ</div></a>
+                                <a href="{{ route('films')}}"><div class="card-body">READ</div></a>
                             </div>
                         </div>
                         <div class="col-xl-3 col-md-6">
                             <div class="card bg-success text-white mb-4">
-                                <a href="{{ url('updateFilmForm') }}"><div class="card-body">UPDATE</div></a>
+                                <a href="{{ route('updateFilm', ['film' => "nomdufilmajoute"]) }}"><div class="card-body">UPDATE</div></a>
                             </div>
                         </div>
                         <div class="col-xl-3 col-md-6">
                             <div class="card bg-danger text-white mb-4">
-                                <a href="{{ url('deleteFilm') }}"><div class="card-body">DELETE</div></a>
+                                <a href="{{ route('deleteFilm', ['film' => "nomdufilmajoutemodifie"]) }}"><div class="card-body">DELETE</div></a>
                             </div>
                         </div>
                     </div>
@@ -52,6 +52,7 @@
                             <tr>
                                 <th>Id</th>
                                 <th>Name</th>
+                                <th>Genre</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -59,6 +60,7 @@
                             <tr>
                                 <td>{{ $film->id }}</td>
                                 <td>{{ $film->name }}</td>
+                                <td>{{ $film->id_genre }}</td>
                             </tr>
                             @endforeach
                         </tbody>
@@ -66,6 +68,7 @@
                             <tr>
                                 <th>Id</th>
                                 <th>Name</th>
+                                <th>Genre</th>
                             </tr>
                         </tfoot>
                     </table>
