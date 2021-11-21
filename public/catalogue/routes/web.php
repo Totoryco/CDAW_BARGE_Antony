@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\listeMediasController;
+use App\Http\Controllers\ShowsFilmsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,15 @@ use App\Http\Controllers\listeMediasController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/films', 'App\Http\Controllers\ShowsFilmsController@showAllFilms')->name('films');
+
+Route::get('/addFilm', 'App\Http\Controllers\ShowsFilmsController@addFilmForm')->name('addFilmForm');
+Route::post('/addFilm', 'App\Http\Controllers\ShowsFilmsController@addFilm')->name('addFilm');
+
+Route::get('/addFilm/{film}', 'App\Http\Controllers\ShowsFilmsController@updateFilmForm')->name('updateFilmForm');
+Route::put('/addFilm/{film}', 'App\Http\Controllers\ShowsFilmsController@updateFilm')->name('updateFilm');
+
+/*
 Route::get('/films', 'App\Http\Controllers\listeMediasController@helloWorld')->name('films');
 Route::get('/films/{idFilm}', 'App\Http\Controllers\listeMediasController@helloBanane')->name('filmsid');
 
@@ -38,5 +48,5 @@ Route::get('/', function() {
     // return view('welcome');
     return view('helloworld');
 });
-
+*/
 ?>
