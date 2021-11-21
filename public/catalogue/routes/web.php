@@ -46,7 +46,7 @@ Route::get('/', function() {
 Route::get('/', function() {
     // echo "Hello world!";
     // return view('welcome');
-    return view('helloworld');
+    return view('cardTemplate');
 });
 */
 ?>
